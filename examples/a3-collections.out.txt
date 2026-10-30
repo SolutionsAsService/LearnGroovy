@@ -1,0 +1,7 @@
+[Rumours, Abbey Road, Songs in the Key of Life, Pet Sounds]
+[Rumours, Songs in the Key of Life]
+[7, 10, 24, 10]
+10
+Pet Sounds
+[60s:2, 70s:2]
+o=4

@@ -1,0 +1,13 @@
+<catalog>
+  <album year='1971'>
+    <title>Whats Going On</title>
+    <artist>Marvin Gaye</artist>
+  </album>
+  <album year='1973'>
+    <title>Innervisions</title>
+    <artist>Stevie Wonder</artist>
+  </album>
+</catalog>
+2
+Innervisions
+[Marvin Gaye, Stevie Wonder]

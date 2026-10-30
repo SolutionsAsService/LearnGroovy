@@ -1,0 +1,12 @@
+null
+unknown city
+no nickname
+null   -> false
+0      -> false
+''     -> false
+[]     -> false
+[:]    -> false
+'x'    -> true
+1      -> true
+[0]    -> true
+null

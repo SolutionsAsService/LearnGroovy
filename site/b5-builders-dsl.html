@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B5 · A tiny DSL · Learn Groovy</title>
+  <meta name="description" content="Closures with a delegate let you write code that reads like configuration: here, a setlist." />
+  <meta name="theme-color" content="#2A1A10" />
+  <meta property="og:title" content="B5 · A tiny DSL · Learn Groovy" />
+  <meta property="og:description" content="Closures with a delegate let you write code that reads like configuration: here, a setlist." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Learn Groovy, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#151110"/><circle cx="16" cy="16" r="11" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="8" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="5.2" fill="#E07A1F"/><circle cx="16" cy="16" r="1.4" fill="#151110"/></svg>
+        <span>Learn Groovy</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="tracks.html" aria-current="page">Tracklist</a>
+        <a href="setup.html">Install Groovy</a>
+        <a href="https://groovy-lang.org/documentation.html">Docs ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="track-head">
+      <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap">
+        <p class="kicker">Side B · Real work · Track B5</p>
+        <h1>A tiny DSL</h1>
+        <p class="lede">Closures with a delegate let you write code that reads like configuration: here, a setlist.</p>
+      </div>
+    </section>
+
+    <section class="track-body">
+      <div class="wrap track-grid">
+        <div class="code-col">
+          <div class="code-bar">
+            <span>b5-builders-dsl.groovy · 32 lines</span>
+            <span class="code-actions">
+              <button type="button" class="copy" data-copy="code">Copy</button>
+              <a href="examples/b5-builders-dsl.groovy" download>Download</a>
+            </span>
+          </div>
+          <pre class="code" id="code" tabindex="0"><code><span class="ln"><span class="k">class</span> <span class="t">Setlist</span> {</span><span class="ln">    <span class="t">String</span> band</span><span class="ln">    <span class="t">List</span>&lt;<span class="t">String</span>&gt; songs = []</span><span class="ln"> </span><span class="ln">    <span class="k">void</span> band(<span class="t">String</span> name) { band = name }</span><span class="ln">    <span class="k">void</span> play(<span class="t">String</span> song) { songs &lt;&lt; song }</span><span class="ln">    <span class="k">void</span> encore(<span class="t">Closure</span> more) {</span><span class="ln">        play(<span class="s">&#x27;--- encore ---&#x27;</span>)</span><span class="ln">        more.delegate = <span class="k">this</span></span><span class="ln">        more()</span><span class="ln">    }</span><span class="ln"> </span><span class="ln">    <span class="k">static</span> <span class="t">Setlist</span> build(<span class="a">@DelegatesTo</span>(<span class="t">Setlist</span>) <span class="t">Closure</span> spec) {</span><span class="ln">        <span class="k">def</span> s = <span class="k">new</span> <span class="t">Setlist</span>()</span><span class="ln">        spec.delegate = s</span><span class="ln">        spec.resolveStrategy = <span class="t">Closure</span>.<span class="t">DELEGATE_FIRST</span></span><span class="ln">        spec()</span><span class="ln">        s</span><span class="ln">    }</span><span class="ln">}</span><span class="ln"> </span><span class="ln"><span class="k">def</span> show = <span class="t">Setlist</span>.build {</span><span class="ln">    band <span class="s">&#x27;The Grooves&#x27;</span></span><span class="ln">    play <span class="s">&#x27;Get Down&#x27;</span></span><span class="ln">    play <span class="s">&#x27;Far Out&#x27;</span></span><span class="ln">    encore {</span><span class="ln">        play <span class="s">&#x27;Right On&#x27;</span></span><span class="ln">    }</span><span class="ln">}</span><span class="ln"> </span><span class="ln">println show.band</span><span class="ln">show.songs.eachWithIndex { song, i -&gt; println <span class="s">&quot;${i + 1}. $song&quot;</span> }</span></code></pre>
+        </div>
+        <aside class="out-col">
+          <h2>Expected output</h2>
+          <pre class="output" tabindex="0">The Grooves
+1. Get Down
+2. Far Out
+3. --- encore ---
+4. Right On</pre>
+          <p class="note">Written by hand from the code, not machine-run on this site. Run it yourself:<br /><code>groovy b5-builders-dsl.groovy</code></p>
+        </aside>
+      </div>
+      <nav class="wrap pager" aria-label="Tracks"><a class="prev" href="b4-http.html"><small>Previous · B4</small>HTTP and a REST API</a><a class="next" href="b6-power-assert.html"><small>Next · B6</small>Testing with assert</a></nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="wrap footer-inner">
+      <p><strong>Learn Groovy</strong> · twelve small, runnable Groovy programs. Every example is a file in <a href="https://github.com/SolutionsAsService/LearnGroovy">the repository</a>; the pages are built from them.</p>
+      <p>Part of the <a href="https://github.com/SolutionsAsService/CodingRoadmap">Coding Roadmap</a>. Groovy is a trademark of the Apache Software Foundation; this site is unofficial. MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

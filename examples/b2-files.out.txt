@@ -1,0 +1,11 @@
+side A
+side B
+bonus track
+
+3
+1: side A
+2: side B
+3: bonus track
+cover.txt
+notes.txt
+true

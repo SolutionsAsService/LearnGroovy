@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Run it · Learn Groovy</title>
+  <meta name="description" content="Install Java and Groovy on macOS, Linux or Windows, then run any Learn Groovy example with one command." />
+  <meta name="theme-color" content="#2A1A10" />
+  <meta property="og:title" content="Run it · Learn Groovy" />
+  <meta property="og:description" content="Install Java and Groovy on macOS, Linux or Windows, then run any Learn Groovy example with one command." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Learn Groovy, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#151110"/><circle cx="16" cy="16" r="11" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="8" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="5.2" fill="#E07A1F"/><circle cx="16" cy="16" r="1.4" fill="#151110"/></svg>
+        <span>Learn Groovy</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="tracks.html">Tracklist</a>
+        <a href="setup.html" aria-current="page">Install Groovy</a>
+        <a href="https://groovy-lang.org/documentation.html">Docs ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="track-head">
+      <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap">
+        <p class="kicker">Before you drop the needle</p>
+        <h1>Run it yourself</h1>
+        <p class="lede">Groovy needs a Java runtime (JDK 17 or newer) and the Groovy command-line tools. Pick your system, then run any track with one command.</p>
+      </div>
+    </section>
+
+    <section class="track-body">
+      <div class="wrap setup-grid">
+        <article class="step">
+          <h2><span>1</span> macOS or Linux</h2>
+          <p>SDKMAN installs and switches Java and Groovy versions for you.</p>
+<pre class="cmd" tabindex="0"><code>curl -s "https://get.sdkman.io" | bash
+sdk install java
+sdk install groovy
+groovy --version</code></pre>
+        </article>
+        <article class="step">
+          <h2><span>2</span> Windows</h2>
+          <p>With Scoop (or <code>choco install groovy</code> with Chocolatey):</p>
+<pre class="cmd" tabindex="0"><code>scoop bucket add java
+scoop install temurin21-jdk groovy
+groovy --version</code></pre>
+        </article>
+        <article class="step">
+          <h2><span>3</span> Run a track</h2>
+          <p>Download any example from its page, or clone the repository, then:</p>
+<pre class="cmd" tabindex="0"><code>git clone https://github.com/SolutionsAsService/LearnGroovy
+cd LearnGroovy/examples
+groovy a2-closures.groovy</code></pre>
+        </article>
+        <article class="step">
+          <h2><span>4</span> Play with it</h2>
+          <p><code>groovyConsole</code> opens a small editor where you can paste a track, change it and run it with Ctrl+R. <code>groovysh</code> is an interactive shell for one-liners.</p>
+          <p>Only track <a href="b4-http.html">B4</a> needs the internet; the rest run offline.</p>
+        </article>
+      </div>
+      <p class="wrap more"><a class="btn" href="a1-hello.html">Start with track A1</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="wrap footer-inner">
+      <p><strong>Learn Groovy</strong> · twelve small, runnable Groovy programs. Every example is a file in <a href="https://github.com/SolutionsAsService/LearnGroovy">the repository</a>; the pages are built from them.</p>
+      <p>Part of the <a href="https://github.com/SolutionsAsService/CodingRoadmap">Coding Roadmap</a>. Groovy is a trademark of the Apache Software Foundation; this site is unofficial. MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

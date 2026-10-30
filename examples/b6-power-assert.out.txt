@@ -1,0 +1,4 @@
+all good so far
+assert bpm('Right On') + 1 == 124
+       |               |   |
+       124             125 false

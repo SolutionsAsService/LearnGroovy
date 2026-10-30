@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracklist · Learn Groovy</title>
+  <meta name="description" content="All twelve Learn Groovy examples: Side A covers the language basics, Side B covers JSON, files, XML, HTTP, DSLs and testing." />
+  <meta name="theme-color" content="#2A1A10" />
+  <meta property="og:title" content="Tracklist · Learn Groovy" />
+  <meta property="og:description" content="All twelve Learn Groovy examples: Side A covers the language basics, Side B covers JSON, files, XML, HTTP, DSLs and testing." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Learn Groovy, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#151110"/><circle cx="16" cy="16" r="11" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="8" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="5.2" fill="#E07A1F"/><circle cx="16" cy="16" r="1.4" fill="#151110"/></svg>
+        <span>Learn Groovy</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="tracks.html" aria-current="page">Tracklist</a>
+        <a href="setup.html">Install Groovy</a>
+        <a href="https://groovy-lang.org/documentation.html">Docs ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="track-head">
+      <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap">
+        <p class="kicker">Tracklist</p>
+        <h1>12 tracks, two sides</h1>
+        <p class="lede">Play them in order, or skip to the one you need. Each track is one runnable file, with the output it should print. Line counts are code only: the two header comments and the blank line after them are left out.</p>
+      </div>
+    </section>
+
+    <section class="sides">
+      <div class="wrap sides-grid">
+        <div>
+          <h2 class="side-h"><span>Side A</span> The basics</h2>
+          <ol class="tracklist detailed"><li><a href="a1-hello.html"><span class="tno">A1</span><span class="tt">Hello, strings</span><span class="tl">18 lines</span></a><p>Strings, GStrings with ${} interpolation, multiline strings and a few handy String methods.</p></li><li><a href="a2-closures.html"><span class="tno">A2</span><span class="tt">Closures</span><span class="tl">19 lines</span></a><p>Blocks of code you can store, pass around and call: the it parameter, currying, and composition.</p></li><li><a href="a3-collections.html"><span class="tno">A3</span><span class="tt">Lists and maps</span><span class="tl">18 lines</span></a><p>Literal lists and maps, then the GDK methods that make them sing: collect, findAll, inject, groupBy, sort.</p></li><li><a href="a4-null-safety.html"><span class="tno">A4</span><span class="tt">Null safety and truth</span><span class="tl">16 lines</span></a><p>The safe-navigation operator ?., the Elvis operator ?: and Groovy truth: what counts as true.</p></li><li><a href="a5-ranges-switch.html"><span class="tno">A5</span><span class="tt">Ranges and switch</span><span class="tl">22 lines</span></a><p>Ranges as first-class values, and a switch that matches types, ranges, lists, regex and closures.</p></li><li><a href="a6-classes-traits.html"><span class="tno">A6</span><span class="tt">Classes and traits</span><span class="tl">30 lines</span></a><p>Classes with automatic properties, named-argument constructors, @Canonical, and traits for mixing in behaviour.</p></li></ol>
+        </div>
+        <div>
+          <h2 class="side-h"><span>Side B</span> Real work</h2>
+          <ol class="tracklist detailed"><li><a href="b1-json.html"><span class="tno">B1</span><span class="tt">JSON in and out</span><span class="tl">22 lines</span></a><p>Parse JSON with JsonSlurper, walk it like objects, and write it back out with JsonOutput.</p></li><li><a href="b2-files.html"><span class="tno">B2</span><span class="tt">Files</span><span class="tl">15 lines</span></a><p>Write, read, append and walk files with the GDK&#x27;s File methods, in a temporary folder so nothing on your disk changes.</p></li><li><a href="b3-xml.html"><span class="tno">B3</span><span class="tt">XML</span><span class="tl">21 lines</span></a><p>Build XML with MarkupBuilder, then read it back with XmlSlurper and GPath.</p></li><li><a href="b4-http.html"><span class="tno">B4</span><span class="tt">HTTP and a REST API</span><span class="tl">16 lines</span></a><p>Call a real public API with nothing but the JDK, and read the JSON it returns. Needs an internet connection.</p></li><li><a href="b5-builders-dsl.html"><span class="tno">B5</span><span class="tt">A tiny DSL</span><span class="tl">32 lines</span></a><p>Closures with a delegate let you write code that reads like configuration: here, a setlist.</p></li><li><a href="b6-power-assert.html"><span class="tno">B6</span><span class="tt">Testing with assert</span><span class="tl">13 lines</span></a><p>Groovy&#x27;s power assert prints every value in a failing expression, so a plain assert is a readable test.</p></li></ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="wrap footer-inner">
+      <p><strong>Learn Groovy</strong> · twelve small, runnable Groovy programs. Every example is a file in <a href="https://github.com/SolutionsAsService/LearnGroovy">the repository</a>; the pages are built from them.</p>
+      <p>Part of the <a href="https://github.com/SolutionsAsService/CodingRoadmap">Coding Roadmap</a>. Groovy is a trademark of the Apache Software Foundation; this site is unofficial. MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

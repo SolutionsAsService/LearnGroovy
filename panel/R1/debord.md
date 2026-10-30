@@ -1,0 +1,9 @@
+Seat: Debord
+Verdict: OBJECT
+Observed: index.png: the hero is all image. A huge "Groovy" in stacked 70s stripe shadows and a spinning record whose groove is code that nobody can read at that size. The caption says "The groove is the code", so the code is cited as texture, not shown. The nostalgia costume (LP, "Drop the needle", "Side A", "liner notes", stripe bands on every page, a "Stop the record" button) is a period commodity-style applied to a language. On a3-collections.png the track page is plain and useful: line-numbered code, expected output, Copy and Download, groovy a3-collections.groovy. The sleeve and the track page are two registers. The sleeve sells; the track teaches. Also, on a3 the line-8 comment "// spread operato" is cut off at the code panel's edge.
+Anchor: Society of the Spectacle, thesis 4 (the spectacle is a social relation between people mediated by images) and thesis 34 (the image as capital accumulated until it becomes image). The 70s LP is recuperated rebellion, a counterculture look turned into a style to buy. The teacher/learner relation is mediated by a retro image before it is mediated by code.
+Meaning: The site says learning Groovy should feel warm and playful, not clinical.
+Artist question: What does the record do that a plain tracklist does not?
+Neutral question: How much of the first screen is code, and how much is decoration of code?
+Opinion: The track pages are honest. The hero spectacularises code, which is the thing the learner came to read. The nostalgia sells the feeling of learning.
+Requested change: Détourne the record. Make the hero groove one real, legible, copyable A1 snippet (about 4 lines of real Groovy with its output) set above the fold at readable size. Keep the spinning disc as a small decorative element, or cut it. The first thing a learner meets must be running code, not the costume. Also fix the clipped comment on line 8 of a3 (wrap or scroll).

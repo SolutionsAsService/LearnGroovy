@@ -1,0 +1,67 @@
+title: Learn Groovy · twelve tracks, from hello to HTTP
+description: Learn the Groovy language from twelve small programs you can run: strings, closures, collections, null safety, classes and traits, JSON, files, XML, HTTP, DSLs and power assert.
+---
+    <section class="cover">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="wrap cover-grid">
+        <div class="cover-copy">
+          <p class="kicker kicker-light">An LP in {{count}} tracks</p>
+          <h1 class="groovy-title" aria-label="Learn Groovy"><span class="small">Learn</span><span class="big">Groovy</span></h1>
+          <p class="cover-lede">The Java-friendly language with closures, builders and no ceremony, taught one short program at a time. Side A is the basics. Side B is real work.</p>
+          <p class="actions">
+            <a class="btn" href="{{first}}">Drop the needle: track A1</a>
+            <a class="btn btn-ghost" href="tracks.html">See the tracklist</a>
+          </p>
+          <figure class="now-playing">
+            <figcaption>Now playing: the same job, twice</figcaption>
+            <div class="np-grid">
+              <div class="np-java">
+                <p class="np-label">Java</p>
+<pre tabindex="0"><code>List&lt;String&gt; titles = new ArrayList&lt;&gt;();
+for (Album album : albums) {
+    titles.add(album.getTitle());
+}</code></pre>
+              </div>
+              <div class="np-groovy">
+                <p class="np-label">Groovy</p>
+<pre tabindex="0"><code>def titles = albums*.title</code></pre>
+              </div>
+            </div>
+            <p class="np-more">The <code>*.</code> spread operator reads the title of every album for you. <a href="a3-collections.html">Track A3</a> plays the rest of it.</p>
+          </figure>
+        </div>
+        <div class="record-wrap">
+          {{record}}
+          <button type="button" class="spin-toggle" aria-pressed="false">Stop the record</button>
+          <p class="record-note">The groove is the code: every example on this site, written around the record.</p>
+        </div>
+      </div>
+      <div class="stripes stripes-wave" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="sides">
+      <div class="wrap sides-grid">
+        <div>
+          <h2 class="side-h"><span>Side A</span> The basics</h2>
+          {{tracks:A}}
+        </div>
+        <div>
+          <h2 class="side-h"><span>Side B</span> Real work</h2>
+          {{tracks:B}}
+        </div>
+      </div>
+    </section>
+
+    <section class="notes">
+      <div class="wrap notes-grid">
+        <div>
+          <p class="kicker">Liner notes</p>
+          <h2>Why Groovy?</h2>
+        </div>
+        <div class="notes-text">
+          <p>Groovy runs on the Java virtual machine and reads Java code as-is, then lets you drop most of the ceremony: no semicolons, no getters and setters, list and map literals, closures everywhere, and a standard library that adds hundreds of handy methods to Java's classes.</p>
+          <p>You'll meet it in Jenkins pipelines, Gradle builds, Grails apps and the Spock test framework. If you know a little Java or JavaScript, Side A will feel familiar within minutes.</p>
+          <p><a class="arrow" href="setup.html">Install Groovy and run the tracks</a></p>
+        </div>
+      </div>
+    </section>

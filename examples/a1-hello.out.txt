@@ -1,0 +1,10 @@
+Hello, Groovy 4!
+Single quotes are plain strings: ${not interpolated}
+Roses are red,
+Groovy is groovy,
+semicolons are optional
+GROOVY
+yvoorG
+GroovyGroovyGroovy
+Groovy
+[a, b, c]

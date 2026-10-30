@@ -1,0 +1,9 @@
+The Grooves
+Ana plays bass
+Bilal plays drums
+Chen plays keys
+Bilal
+{"band":"The Grooves","songs":["Get Down","Far Out"],"encore":true}
+{
+    "ok": true
+}

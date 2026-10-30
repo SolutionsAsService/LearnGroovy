@@ -1,0 +1,12 @@
+10
+true
+abcde
+[1, 4, 7, 10]
+1967 -> sixties
+1977 -> seventies
+Groovy -> a capitalised word
+7 -> lucky
+3.14 -> some other number
+[1, 2] -> a list of 2
+lowercase -> no idea
+null -> nothing

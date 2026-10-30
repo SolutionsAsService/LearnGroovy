@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A6 · Classes and traits · Learn Groovy</title>
+  <meta name="description" content="Classes with automatic properties, named-argument constructors, @Canonical, and traits for mixing in behaviour." />
+  <meta name="theme-color" content="#2A1A10" />
+  <meta property="og:title" content="A6 · Classes and traits · Learn Groovy" />
+  <meta property="og:description" content="Classes with automatic properties, named-argument constructors, @Canonical, and traits for mixing in behaviour." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Learn Groovy, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#151110"/><circle cx="16" cy="16" r="11" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="8" fill="none" stroke="#3a2a22" stroke-width="1.2"/><circle cx="16" cy="16" r="5.2" fill="#E07A1F"/><circle cx="16" cy="16" r="1.4" fill="#151110"/></svg>
+        <span>Learn Groovy</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="tracks.html" aria-current="page">Tracklist</a>
+        <a href="setup.html">Install Groovy</a>
+        <a href="https://groovy-lang.org/documentation.html">Docs ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="track-head">
+      <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap">
+        <p class="kicker">Side A · The basics · Track A6</p>
+        <h1>Classes and traits</h1>
+        <p class="lede">Classes with automatic properties, named-argument constructors, @Canonical, and traits for mixing in behaviour.</p>
+      </div>
+    </section>
+
+    <section class="track-body">
+      <div class="wrap track-grid">
+        <div class="code-col">
+          <div class="code-bar">
+            <span>a6-classes-traits.groovy · 30 lines</span>
+            <span class="code-actions">
+              <button type="button" class="copy" data-copy="code">Copy</button>
+              <a href="examples/a6-classes-traits.groovy" download>Download</a>
+            </span>
+          </div>
+          <pre class="code" id="code" tabindex="0"><code><span class="ln"><span class="k">import</span> groovy.transform.<span class="t">Canonical</span></span><span class="ln"> </span><span class="ln"><span class="a">@Canonical</span></span><span class="ln"><span class="k">class</span> <span class="t">Record</span> {</span><span class="ln">    <span class="t">String</span> artist</span><span class="ln">    <span class="t">String</span> title</span><span class="ln">    <span class="k">int</span> year</span><span class="ln">}</span><span class="ln"> </span><span class="ln"><span class="k">trait</span> <span class="t">Playable</span> {</span><span class="ln">    <span class="t">String</span> play() { <span class="s">&quot;Now playing: ${title} by ${artist}&quot;</span> }</span><span class="ln">}</span><span class="ln"> </span><span class="ln"><span class="k">trait</span> <span class="t">Collectible</span> {</span><span class="ln">    <span class="k">boolean</span> isVintage() { year &lt; <span class="n">1980</span> }</span><span class="ln">}</span><span class="ln"> </span><span class="ln"><span class="k">class</span> <span class="t">Vinyl</span> <span class="k">extends</span> <span class="t">Record</span> <span class="k">implements</span> <span class="t">Playable</span>, <span class="t">Collectible</span> {</span><span class="ln">    <span class="k">int</span> rpm = <span class="n">33</span></span><span class="ln">}</span><span class="ln"> </span><span class="ln"><span class="k">def</span> lp = <span class="k">new</span> <span class="t">Vinyl</span>(artist: <span class="s">&#x27;Stevie Wonder&#x27;</span>, title: <span class="s">&#x27;Innervisions&#x27;</span>, year: <span class="n">1973</span>)</span><span class="ln">println lp.play()</span><span class="ln">println lp.vintage            <span class="c">// property access calls isVintage()</span></span><span class="ln">println lp.rpm</span><span class="ln"> </span><span class="ln"><span class="k">def</span> a = <span class="k">new</span> <span class="t">Record</span>(<span class="s">&#x27;Queen&#x27;</span>, <span class="s">&#x27;Jazz&#x27;</span>, <span class="n">1978</span>)</span><span class="ln"><span class="k">def</span> b = <span class="k">new</span> <span class="t">Record</span>(<span class="s">&#x27;Queen&#x27;</span>, <span class="s">&#x27;Jazz&#x27;</span>, <span class="n">1978</span>)</span><span class="ln">println a                     <span class="c">// toString from @Canonical</span></span><span class="ln">println a == b                <span class="c">// equals from @Canonical</span></span></code></pre>
+        </div>
+        <aside class="out-col">
+          <h2>Expected output</h2>
+          <pre class="output" tabindex="0">Now playing: Innervisions by Stevie Wonder
+true
+33
+Record(Queen, Jazz, 1978)
+true</pre>
+          <p class="note">Written by hand from the code, not machine-run on this site. Run it yourself:<br /><code>groovy a6-classes-traits.groovy</code></p>
+        </aside>
+      </div>
+      <nav class="wrap pager" aria-label="Tracks"><a class="prev" href="a5-ranges-switch.html"><small>Previous · A5</small>Ranges and switch</a><a class="next" href="b1-json.html"><small>Next · B1</small>JSON in and out</a></nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="wrap footer-inner">
+      <p><strong>Learn Groovy</strong> · twelve small, runnable Groovy programs. Every example is a file in <a href="https://github.com/SolutionsAsService/LearnGroovy">the repository</a>; the pages are built from them.</p>
+      <p>Part of the <a href="https://github.com/SolutionsAsService/CodingRoadmap">Coding Roadmap</a>. Groovy is a trademark of the Apache Software Foundation; this site is unofficial. MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+title: Run it · Learn Groovy
+description: Install Java and Groovy on macOS, Linux or Windows, then run any Learn Groovy example with one command.
+nav: setup
+---
+    <section class="track-head">
+      <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap">
+        <p class="kicker">Before you drop the needle</p>
+        <h1>Run it yourself</h1>
+        <p class="lede">Groovy needs a Java runtime (JDK 17 or newer) and the Groovy command-line tools. Pick your system, then run any track with one command.</p>
+      </div>
+    </section>
+
+    <section class="track-body">
+      <div class="wrap setup-grid">
+        <article class="step">
+          <h2><span>1</span> macOS or Linux</h2>
+          <p>SDKMAN installs and switches Java and Groovy versions for you.</p>
+<pre class="cmd" tabindex="0"><code>curl -s "https://get.sdkman.io" | bash
+sdk install java
+sdk install groovy
+groovy --version</code></pre>
+        </article>
+        <article class="step">
+          <h2><span>2</span> Windows</h2>
+          <p>With Scoop (or <code>choco install groovy</code> with Chocolatey):</p>
+<pre class="cmd" tabindex="0"><code>scoop bucket add java
+scoop install temurin21-jdk groovy
+groovy --version</code></pre>
+        </article>
+        <article class="step">
+          <h2><span>3</span> Run a track</h2>
+          <p>Download any example from its page, or clone the repository, then:</p>
+<pre class="cmd" tabindex="0"><code>git clone https://github.com/SolutionsAsService/LearnGroovy
+cd LearnGroovy/examples
+groovy a2-closures.groovy</code></pre>
+        </article>
+        <article class="step">
+          <h2><span>4</span> Play with it</h2>
+          <p><code>groovyConsole</code> opens a small editor where you can paste a track, change it and run it with Ctrl+R. <code>groovysh</code> is an interactive shell for one-liners.</p>
+          <p>Only track <a href="b4-http.html">B4</a> needs the internet; the rest run offline.</p>
+        </article>
+      </div>
+      <p class="wrap more"><a class="btn" href="{{first}}">Start with track A1</a></p>
+    </section>
